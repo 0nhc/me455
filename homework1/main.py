@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 from env import Env
 
 def main():
+    """
+    Question 1
+    """
     # Create an instance of the Env class
     env = Env(start_x=0.0, start_y=0.0, end_x=1.0, end_y=1.0, dl=0.001)
     # Set the source origin
@@ -15,9 +18,14 @@ def main():
     # Get observations for each random point
     for point in random_points:
         x, y = point
-        env.get_observation(x, y, execute=True)
+        env.register_observation(x, y)
     # Visualize the observation map
     env.visualize_map(show_observation_map=True)
+
+    """
+    Question 2
+    """
+    
 
 if __name__ == "__main__":
     main()
